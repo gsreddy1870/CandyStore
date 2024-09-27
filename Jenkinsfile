@@ -10,7 +10,7 @@ pipeline {
         stage('docker') {
             steps {
                 script {
-                withDockerRegistry(url: 'https://app.docker.com/') {
+                withDockerRegistry(credentialsId: 'doc') {
                          sh 'docker build -t ramya249/CandyStore .'
                          sh 'docker push ramya249/CandyStore:latest'
                    }
