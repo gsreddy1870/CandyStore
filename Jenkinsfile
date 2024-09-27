@@ -11,8 +11,8 @@ pipeline {
             steps {
                 script {
                 withDockerRegistry(credentialsId: 'doc') {
-                         sh 'docker build -t Ramya249/supercandy .'
-                         sh 'docker push Ramya249/supercandy:latest'
+                         sh 'docker build -t Ramya249/CandyStore .'
+                         sh 'docker push Ramya249/CandyStore:latest'
                    }
                }
             }
